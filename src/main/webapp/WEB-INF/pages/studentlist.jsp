@@ -1,5 +1,7 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="fr" %>
+
 <html>
 <body>
 <h3>List-of-Students-Using-JSTL</h3>
@@ -8,15 +10,16 @@
 	
 	<tr>
 		<th>RollNo</th><th>Name</th><th>Branch</th><th>Sem</th>
-	<tr>
+	</tr>
 	<c:forEach var="student" items="${students}">
-		<tr>
+		
+			<tr>
 			<td>${student.rno}</td>
 			<td>${student.name}</td>
 			<td>${student.branch}</td>
 			<td>${student.sem}</td>
 			<td><a href="removestudent?id=${student.rno}">[X]</a></td>
-			<td><a href="updatestudent?id=${student.rno}">Change</a></td>
+			<td><a href="change?id=${student.rno}">Change</a></td>
 		</tr>
 	</c:forEach>
 	</table>

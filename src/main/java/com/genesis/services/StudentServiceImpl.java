@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.genesis.dao.StudentDAO;
+import com.genesis.dao.StudentDAOImpl;
 import com.genesis.entities.Student;
 
 @Service
 public class StudentServiceImpl implements StudentService {
-	
 	@Autowired
 	private StudentDAO studentDAO;
 	

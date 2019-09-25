@@ -2,11 +2,13 @@ package com.genesis.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
 
 @Entity
 public class Student {
 	@Id
 	private int rno;
+//	@Pattern(regexp = "[0-9]", message="Only alphabets allowed")
 	private String name;
 	private String branch;
 	private int sem;
